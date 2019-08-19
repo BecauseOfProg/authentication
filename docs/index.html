@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.30.0">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
+  <meta id="repository-name" content="github.com/BecauseOfProg/authentication">
+  <title>README - github.com/BecauseOfProg/authentication</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent " data-id="github.com/BecauseOfProg/authentication/Authentication" data-name="authentication">
+      <a href="Authentication.html">Authentication</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/Base" data-name="authentication::base">
+      <a href="Authentication/Base.html">Base</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/CostTooHigh" data-name="authentication::costtoohigh">
+      <a href="Authentication/CostTooHigh.html">CostTooHigh</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/CostTooLow" data-name="authentication::costtoolow">
+      <a href="Authentication/CostTooLow.html">CostTooLow</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/Exception" data-name="authentication::exception">
+      <a href="Authentication/Exception.html">Exception</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/PasswordTooLong" data-name="authentication::passwordtoolong">
+      <a href="Authentication/PasswordTooLong.html">PasswordTooLong</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/PasswordTooShort" data-name="authentication::passwordtooshort">
+      <a href="Authentication/PasswordTooShort.html">PasswordTooShort</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/SaltError" data-name="authentication::salterror">
+      <a href="Authentication/SaltError.html">SaltError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<p>&lt;div align="center">
+  &lt;h1>Authentication&lt;/h1>
+  &lt;h3>A class authentication library&lt;/h3>
+  &lt;a href="https://circleci.com/gh/BecauseOfProg/authentication"></p>
+
+<pre><code><span class="o">&lt;</span>img src<span class="o">=</span><span class="s">&quot;https://circleci.com/gh/BecauseOfProg/authentication.svg?style=svg&quot;</span> alt<span class="o">=</span><span class="s">&quot;Build status&quot;</span> <span class="s">/&gt;</code></pre>
+
+<p>&lt;/a>
+&lt;/div></p>
+
+<ul><li><a href="#why-this-library" target="_blank">Why this library?</a></li><li><a href="#installation" target="_blank">Installation</a></li><li><a href="#usage" target="_blank">Usage</a></li><li><a href="#contributing" target="_blank">Contributing</a></li><li><a href="#credits" target="_blank">Credits</a></li><li><a href="#license" target="_blank">License</a></li></ul>
+
+<h2>Why this library?</h2>
+
+<p>It's a library that simplify the use of Crypto::Bcrypt.
+  With Authentication, you don't need to care about password, Authentication takes everything in charge</p>
+
+<h2>Installation</h2>
+
+<p>Add the dependency to your application's <code>shard.yml</code>:</p>
+
+<pre><code class="language-yaml">dependencies:
+  bitwise:
+    github: BecauseOfProg/authentication</code></pre>
+
+<h2>Usage</h2>
+
+<p>Documentation &lt;a href="https://becauseofprog.github.io/authentication/">here&lt;/a>
+More examples in the documentation & in the tests</p>
+
+<p>Better explained by example</p>
+
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;authentication&quot;</span>
+
+<span class="k">class</span> <span class="t">User</span> <span class="o">&lt;</span> <span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>
+  @@cost <span class="o">=</span> <span class="n">10</span>
+  @@salt <span class="o">=</span> <span class="s">&quot;YXplcnR5dWlvcHFzZGZnaA==&quot;</span> <span class="c"># Must be base64 encoded</span>
+<span class="k">end</span>
+
+user <span class="o">=</span> <span class="t">User</span>.password <span class="o">=</span> <span class="s">&quot;test&quot;</span> <span class="c">#=&gt; User()</span>
+user.authenticate <span class="s">&quot;test&quot;</span> <span class="c">#=&gt; Bool(true)</span>
+
+<span class="c"># More examples in the documentation &amp; in the tests</span></code></pre>
+
+<h2>Contributing</h2>
+
+<ol><li>Fork the repository (&lt;https://github.com/BecauseOfProg/authentication/fork>)</li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new <a href="https://github.com/BecauseOfProg/authentication/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc" target="_blank">Pull Request</a></li></ol>
+
+<h2>Credits</h2>
+
+<ul><li>Maintainer : <a href="https://github.com/Whaxion" target="_blank">Whaxion</a></li></ul>
+
+<h2>License</h2>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2019 Whaxion</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+</div>
+</body>
+</html>

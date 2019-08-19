@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Authentication</h1>
-  <h3>A class authentication library</h3>
+  <h3>A class authentication library for Crystal</h3>
   <a href="https://circleci.com/gh/BecauseOfProg/authentication">
     <img src="https://circleci.com/gh/BecauseOfProg/authentication.svg?style=svg" alt="Build status" />
   </a>

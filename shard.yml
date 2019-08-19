@@ -1,0 +1,9 @@
+name: authentication
+version: 0.1.0
+
+authors:
+  - Nicolas Martinussen <me@whaxion.be>
+
+crystal: 0.30.1
+
+license: MIT

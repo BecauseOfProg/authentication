@@ -61,6 +61,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/PasswordHashNotSet" data-name="authentication::passwordhashnotset">
+      <a href="../Authentication/PasswordHashNotSet.html">PasswordHashNotSet</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/PasswordTooLong" data-name="authentication::passwordtoolong">
       <a href="../Authentication/PasswordTooLong.html">PasswordTooLong</a>
       
@@ -68,11 +73,6 @@
   
   <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/PasswordTooShort" data-name="authentication::passwordtooshort">
       <a href="../Authentication/PasswordTooShort.html">PasswordTooShort</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/SaltError" data-name="authentication::salterror">
-      <a href="../Authentication/SaltError.html">SaltError</a>
       
     </li>
   
@@ -116,7 +116,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L9" target="_blank">
+      <a href="https://github.com/BecauseOfProg/authentication/blob/22ae4041bbfbd67e0ae11b33529759552904601c/src/authentication.cr#L9" target="_blank">
         authentication.cr
       </a>
     
@@ -150,11 +150,6 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#check_salt:Bool-class-method" class="signature"><strong>.check_salt</strong> : Bool</a>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#cost-class-method" class="signature"><strong>.cost</strong></a>
         
           <div class="summary"><p>Get cost <code></code>`crystal Authentication::Base.cost = 15 #=> Bool(true) Authentication::Base.cost #=> 15 <code></code>`</p></div>
@@ -165,20 +160,6 @@
         <a href="#cost=(cost:Int32)-class-method" class="signature"><strong>.cost=</strong>(cost : Int32)</a>
         
           <div class="summary"><p>Set cost <code></code>`crystal Authentication::Base.cost = 15 #=> Bool(true) Authentication::Base.cost = 3 # raise CostTooLow("Cost too low, 4 minimum is required (current cost 3)") exception <code></code>`</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#salt-class-method" class="signature"><strong>.salt</strong></a>
-        
-          <div class="summary"><p>Get salt <code></code>`crystal Authentication::Base.salt = "YXplcnR5dWlvcHFzZGZnaA== #=> Bool(true) # Salt should be Base64 encoded Authentication::Base.salt #=> "YXplcnR5dWlvcHFzZGZnaA==" <code></code>`</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#salt=(salt:String)-class-method" class="signature"><strong>.salt=</strong>(salt : String)</a>
-        
-          <div class="summary"><p>Set salt <code></code>`crystal Authentication::Base.salt = "YXplcnR5dWlvcHFzZGZnaA==" #=> Bool(true) Authentication::Base.salt = "YXplcnR5" # raise SaltError("Salt too short, must be 16 chars decoded minimum (current 6)") exception <code></code>`</p></div>
         
       </li>
     
@@ -268,7 +249,7 @@ authentication2 <span class="o">=</span> <span class="t">Authentication</span><s
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/22ae4041bbfbd67e0ae11b33529759552904601c/src/authentication.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -289,23 +270,7 @@ authentication2 <span class="o">=</span> <span class="t">Authentication</span><s
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L116" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="check_salt:Bool-class-method">
-      <div class="signature">
-        
-        def self.<strong>check_salt</strong> : Bool
-
-        <a class="method-permalink" href="#check_salt:Bool-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L133" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/22ae4041bbfbd67e0ae11b33529759552904601c/src/authentication.cr#L100" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -326,7 +291,7 @@ authentication2 <span class="o">=</span> <span class="t">Authentication</span><s
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/22ae4041bbfbd67e0ae11b33529759552904601c/src/authentication.cr#L82" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -347,49 +312,7 @@ authentication2 <span class="o">=</span> <span class="t">Authentication</span><s
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L87" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="salt-class-method">
-      <div class="signature">
-        
-        def self.<strong>salt</strong>
-
-        <a class="method-permalink" href="#salt-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Get salt</p>
-
-<pre><code class="language-crystal"><span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.salt <span class="o">=</span> <span class="s">&quot;YXplcnR5dWlvcHFzZGZnaA== #=&gt; Bool(true) # Salt should be Base64 encoded
-Authentication::Base.salt #=&gt; &quot;</span><span class="t">YXplcnR5dWlvcHFzZGZnaA</span><span class="o">==</span><span class="s">&quot;</code></pre></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L97" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="salt=(salt:String)-class-method">
-      <div class="signature">
-        
-        def self.<strong>salt=</strong>(salt : String)
-
-        <a class="method-permalink" href="#salt=(salt:String)-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Set salt</p>
-
-<pre><code class="language-crystal"><span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.salt <span class="o">=</span> <span class="s">&quot;YXplcnR5dWlvcHFzZGZnaA==&quot;</span> <span class="c">#=&gt; Bool(true)</span>
-<span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.salt <span class="o">=</span> <span class="s">&quot;YXplcnR5&quot;</span> <span class="c"># raise SaltError(&quot;Salt too short, must be 16 chars decoded minimum (current 6)&quot;) exception</span></code></pre></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L106" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/22ae4041bbfbd67e0ae11b33529759552904601c/src/authentication.cr#L91" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -417,7 +340,7 @@ authentication.authenticate <span class="s">&quot;test&quot;</span></code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L64" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/22ae4041bbfbd67e0ae11b33529759552904601c/src/authentication.cr#L65" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -438,7 +361,7 @@ authentication.password <span class="o">=</span> <span class="s">&quot;test&quot
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/22ae4041bbfbd67e0ae11b33529759552904601c/src/authentication.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -459,7 +382,7 @@ authentication.password_hash <span class="c">#=&gt; &quot;$2a$16$YXplcnR5dWlvcHF
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L45" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/22ae4041bbfbd67e0ae11b33529759552904601c/src/authentication.cr#L45" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -480,7 +403,7 @@ authentication.password_hash <span class="o">=</span> <span class="s">&quot;$2a$
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/42c93c0e88f830431de2d8b161a2a5c4ba5bb3a8/src/authentication.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/22ae4041bbfbd67e0ae11b33529759552904601c/src/authentication.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>

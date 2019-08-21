@@ -2,7 +2,6 @@ require "./spec_helper"
 
 class User < Authentication::Base
   @@cost = 8
-  @@salt = "YXplcnR5dWlvcHFzZGZnaA=="
 end
 
 describe Authentication do
@@ -31,32 +30,6 @@ describe Authentication do
       it "should change the cost" do
         (Authentication::Base.cost = 8).should be_true
         Authentication::Base.cost.should eq 8
-      end
-    end
-
-    describe "#self.salt=" do
-
-      it "should raise a Not base64 encoded exception" do
-        begin
-          Authentication::Base.salt = "XplcnR5dWlvcHFzZGZnaA"
-          false.should be_true
-        rescue e : Authentication::SaltError
-          e.message.should eq "Not Base64 encoded"
-        end
-      end
-
-      it "should raise a Salt too short exception" do
-        begin
-          Authentication::Base.salt = "YXplcnR5"
-          false.should be_true
-        rescue e : Authentication::SaltError
-          e.message.should match(/^Salt too short, must be 16 chars decoded minimum \(current [0-9]+\)$/)
-        end
-      end
-
-      it "should change the salt" do
-        (Authentication::Base.salt = "YXplcnR5dWlvcHFzZGZnaA==").should be_true
-        Authentication::Base.salt.should eq "YXplcnR5dWlvcHFzZGZnaA=="
       end
     end
 
@@ -99,6 +72,16 @@ describe Authentication do
       it "should authenticate" do
         authentication = Authentication::Base.new set_password: "test"
         authentication.authenticate("test").should be_true
+      end
+
+      it "should raise a PasswordHashNotSet exception" do
+        begin
+          authentication = Authentication::Base.new
+          authentication.authenticate("test")
+          false.should be_true
+        rescue e : Authentication::PasswordHashNotSet
+          e.message.should eq "Password hash not set"
+        end
       end
     end
 

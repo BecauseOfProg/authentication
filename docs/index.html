@@ -61,6 +61,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/PasswordHashNotSet" data-name="authentication::passwordhashnotset">
+      <a href="Authentication/PasswordHashNotSet.html">PasswordHashNotSet</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/PasswordTooLong" data-name="authentication::passwordtoolong">
       <a href="Authentication/PasswordTooLong.html">PasswordTooLong</a>
       
@@ -68,11 +73,6 @@
   
   <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/PasswordTooShort" data-name="authentication::passwordtooshort">
       <a href="Authentication/PasswordTooShort.html">PasswordTooShort</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/BecauseOfProg/authentication/Authentication/SaltError" data-name="authentication::salterror">
-      <a href="Authentication/SaltError.html">SaltError</a>
       
     </li>
   
@@ -90,7 +90,7 @@
 <div class="main-content">
 <p>&lt;div align="center">
   &lt;h1>Authentication&lt;/h1>
-  &lt;h3>A class authentication library&lt;/h3>
+  &lt;h3>A class authentication library for Crystal&lt;/h3>
   &lt;a href="https://circleci.com/gh/BecauseOfProg/authentication"></p>
 
 <pre><code><span class="o">&lt;</span>img src<span class="o">=</span><span class="s">&quot;https://circleci.com/gh/BecauseOfProg/authentication.svg?style=svg&quot;</span> alt<span class="o">=</span><span class="s">&quot;Build status&quot;</span> <span class="s">/&gt;</code></pre>
@@ -124,7 +124,6 @@ More examples in the documentation & in the tests</p>
 
 <span class="k">class</span> <span class="t">User</span> <span class="o">&lt;</span> <span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>
   @@cost <span class="o">=</span> <span class="n">10</span>
-  @@salt <span class="o">=</span> <span class="s">&quot;YXplcnR5dWlvcHFzZGZnaA==&quot;</span> <span class="c"># Must be base64 encoded</span>
 <span class="k">end</span>
 
 user <span class="o">=</span> <span class="t">User</span>.password <span class="o">=</span> <span class="s">&quot;test&quot;</span> <span class="c">#=&gt; User()</span>

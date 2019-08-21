@@ -38,7 +38,6 @@ require "authentication"
 
 class User < Authentication::Base
   @@cost = 10
-  @@salt = "YXplcnR5dWlvcHFzZGZnaA==" # Must be base64 encoded
 end
 
 user = User.password = "test" #=> User()

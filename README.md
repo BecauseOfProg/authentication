@@ -14,7 +14,7 @@
 - [License](#license)
 
 ## Why this library?
-  It's a library that simplify the use of Crypto::Bcrypt.
+  It's a library that simplify the use of [Crypto::Bcrypt](https://crystal-lang.org/api/latest/Crypto/Bcrypt/Password.html).
   With Authentication, you don't need to care about password, Authentication takes everything in charge
 
 ## Installation

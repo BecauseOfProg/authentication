@@ -12,7 +12,10 @@ module Authentication
     @bcrypt : (Crypto::Bcrypt::Password|Nil)
 
     # Create an instance
-    # NOTE: You can set password hash with `set_password_hash: "password_hash"`` or set password with `set_password: "password"`
+    #
+    # NOTE: You can set password hash with `set_password_hash: "password_hash"` or set password with `set_password: "password"`
+    #
+    # Example:
     # ```crystal
     # authentication = Authentication::Base.new set_password_hash: "$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K"
     # authentication2 = Authentication::Base.new set_password: "$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K"
@@ -27,6 +30,8 @@ module Authentication
     end
 
     # Set password
+    #
+    # Example:
     # ```crystal
     # authentication = Authentication::Base.new
     # authentication.password = "test" #=> "$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K"
@@ -38,6 +43,8 @@ module Authentication
     end
 
     # Get password_hash
+    #
+    # Example:
     # ```crystal
     # authentication = Authentication::Base.new set_password_hash: "$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K"
     # authentication.password_hash #=> "$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K"
@@ -47,6 +54,8 @@ module Authentication
     end
 
     # Set password_hash
+    #
+    # Example:
     # ```crystal
     # authentication = Authentication::Base.new
     # authentication.password_hash = "$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K"
@@ -57,7 +66,10 @@ module Authentication
     end
 
     # Authenticate
+    #
     # NOTE: You can set the password_hash here with `set_password_hash: password_hash`
+    #
+    # Example:
     # ```crystal
     # authentication = Authentication::Base.new set_password: test
     # authentication.authenticate "test"
@@ -75,6 +87,8 @@ module Authentication
     end
 
     # Get cost
+    #
+    # Example:
     # ```crystal
     # Authentication::Base.cost = 15 #=> Bool(true)
     # Authentication::Base.cost #=> 15
@@ -84,6 +98,8 @@ module Authentication
     end
 
     # Set cost
+    #
+    # Example:
     # ```crystal
     # Authentication::Base.cost = 15 #=> Bool(true)
     # Authentication::Base.cost = 3 # raise CostTooLow("Cost too low, 4 minimum is required (current cost 3)") exception

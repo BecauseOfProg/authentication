@@ -9,7 +9,7 @@ module Authentication
   class Base
     @@cost = Crypto::Bcrypt::DEFAULT_COST
 
-    @bcrypt : (Crypto::Bcrypt::Password|Nil)
+    @bcrypt : (Crypto::Bcrypt::Password | Nil)
 
     # Create an instance
     # NOTE: You can set password hash with `set_password_hash: "password_hash"`` or set password with `set_password: "password"`
@@ -29,7 +29,7 @@ module Authentication
     # Set password
     # ```crystal
     # authentication = Authentication::Base.new
-    # authentication.password = "test" #=> "$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K"
+    # authentication.password = "test" # => "$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K"
     # ```
     def password=(password : String) : String
       check
@@ -40,7 +40,7 @@ module Authentication
     # Get password_hash
     # ```crystal
     # authentication = Authentication::Base.new set_password_hash: "$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K"
-    # authentication.password_hash #=> "$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K"
+    # authentication.password_hash # => "$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K"
     # ```
     def password_hash : String
       @bcrypt.to_s
@@ -76,8 +76,8 @@ module Authentication
 
     # Get cost
     # ```crystal
-    # Authentication::Base.cost = 15 #=> Bool(true)
-    # Authentication::Base.cost #=> 15
+    # Authentication::Base.cost = 15 # => Bool(true)
+    # Authentication::Base.cost      # => 15
     # ```
     def self.cost
       @@cost
@@ -85,8 +85,8 @@ module Authentication
 
     # Set cost
     # ```crystal
-    # Authentication::Base.cost = 15 #=> Bool(true)
-    # Authentication::Base.cost = 3 # raise CostTooLow("Cost too low, 4 minimum is required (current cost 3)") exception
+    # Authentication::Base.cost = 15 # => Bool(true)
+    # Authentication::Base.cost = 3  # raise CostTooLow("Cost too low, 4 minimum is required (current cost 3)") exception
     # ```
     def self.cost=(cost : Int32)
       @@cost = cost
@@ -113,7 +113,5 @@ module Authentication
         raise PasswordTooLong.new("Password too long, #{Crypto::Bcrypt::PASSWORD_RANGE.end} length maximum is required (current length #{password.size})")
       end
     end
-
   end
-
 end

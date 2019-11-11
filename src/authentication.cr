@@ -1,4 +1,4 @@
-require "./exceptions/*"
+require "./exceptions"
 require "crypto/bcrypt"
 require "crypto/subtle"
 

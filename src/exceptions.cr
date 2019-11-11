@@ -2,18 +2,18 @@ module Authentication
   class Exception < ::Exception
   end
 
-  class CostTooHigh < ::ArgumentError
+  class CostTooHigh < Exception
   end
 
-  class CostTooLow < ::ArgumentError
+  class CostTooLow < Exception
   end
 
-  class PasswordHashNotSet < ::ArgumentError
+  class PasswordHashNotSet < Exception
   end
 
-  class PasswordTooLong < ::ArgumentError
+  class PasswordTooLong < Exception
   end
 
-  class PasswordTooShort < ::ArgumentError
+  class PasswordTooShort < Exception
   end
 end

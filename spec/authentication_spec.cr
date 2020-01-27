@@ -5,9 +5,15 @@ class User < Authentication::Base
 end
 
 describe Authentication do
+  it "should confirm that all exceptions inherits from Authentication::Exception" do
+    Authentication::CostTooHigh.should be < Authentication::Exception
+    Authentication::CostTooLow.should be < Authentication::Exception
+    Authentication::PasswordHashNotSet.should be < Authentication::Exception
+    Authentication::PasswordTooLong.should be < Authentication::Exception
+    Authentication::PasswordTooShort.should be < Authentication::Exception
+  end
 
   describe Authentication::Base do
-
     describe "#self.cost=" do
       it "should raise a CostTooLow Exception" do
         begin
@@ -90,6 +96,5 @@ describe Authentication do
       user.should be_a(User)
       (user.authenticate "test").should be_true
     end
-
   end
 end

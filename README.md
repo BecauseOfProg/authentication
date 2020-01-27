@@ -14,7 +14,7 @@
 - [License](#license)
 
 ## Why this library?
-  It's a library that simplify the use of Crypto::Bcrypt.
+  It's a library that simplify the use of [Crypto::Bcrypt](https://crystal-lang.org/api/latest/Crypto/Bcrypt/Password.html).
   With Authentication, you don't need to care about password, Authentication takes everything in charge
 
 ## Installation
@@ -23,7 +23,7 @@ Add the dependency to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  bitwise:
+  authentication:
     github: BecauseOfProg/authentication
 ```
 
@@ -62,7 +62,7 @@ user.authenticate "test" #=> Bool(true)
 
 The MIT License (MIT)
 
-Copyright (c) 2019 Whaxion
+Copyright (c) 2020 Whaxion
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

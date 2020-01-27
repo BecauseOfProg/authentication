@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.30.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/BecauseOfProg/authentication">
   <title>Authentication::Base - github.com/BecauseOfProg/authentication</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
@@ -113,10 +117,17 @@
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/BecauseOfProg/authentication/blob/710496026163b789e4647a61242b378db01bd363/src/authentication.cr#L9" target="_blank">
+      <a href="https://github.com/BecauseOfProg/authentication/blob/8da0cfae172538bf6566d54baa78a6f4a5990cd5/src/authentication.cr#L9" target="_blank">
         authentication.cr
       </a>
     
@@ -127,7 +138,14 @@
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -141,7 +159,14 @@
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -167,7 +192,14 @@
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -229,7 +261,14 @@
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(set_password_hash=&amp;quot;&amp;quot;,set_password=&amp;quot;&amp;quot;)-class-method">
       <div class="signature">
@@ -239,19 +278,22 @@
         <a class="method-permalink" href="#new(set_password_hash=&quot;&quot;,set_password=&quot;&quot;)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Create an instance</p>
+        <div class="doc">
+          
+          <p>Create an instance</p>
 
 <p><span class="flag purple">NOTE</span>  You can set password hash with <code>set_password_hash: "password_hash"</code> or set password with <code>set_password: "password"</code></p>
 
 <p>Example:</p>
 
 <pre><code class="language-crystal">authentication <span class="o">=</span> <span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.<span class="k">new</span> set_password_hash: <span class="s">&quot;$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K&quot;</span>
-authentication2 <span class="o">=</span> <span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.<span class="k">new</span> set_password: <span class="s">&quot;$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K&quot;</span></code></pre></div>
+authentication2 <span class="o">=</span> <span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.<span class="k">new</span> set_password: <span class="s">&quot;$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K&quot;</span></code></pre>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/710496026163b789e4647a61242b378db01bd363/src/authentication.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/8da0cfae172538bf6566d54baa78a6f4a5990cd5/src/authentication.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -259,7 +301,14 @@ authentication2 <span class="o">=</span> <span class="t">Authentication</span><s
 
 
 
-  <h2>Class Method Detail</h2>
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
   
     <div class="entry-detail" id="check_cost:Bool-class-method">
       <div class="signature">
@@ -272,7 +321,7 @@ authentication2 <span class="o">=</span> <span class="t">Authentication</span><s
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/710496026163b789e4647a61242b378db01bd363/src/authentication.cr#L116" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/8da0cfae172538bf6566d54baa78a6f4a5990cd5/src/authentication.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -285,17 +334,20 @@ authentication2 <span class="o">=</span> <span class="t">Authentication</span><s
         <a class="method-permalink" href="#cost-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get cost</p>
+        <div class="doc">
+          
+          <p>Get cost</p>
 
 <p>Example:</p>
 
-<pre><code class="language-crystal"><span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.cost <span class="o">=</span> <span class="n">15</span> <span class="c">#=&gt; Bool(true)</span>
-<span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.cost <span class="c">#=&gt; 15</span></code></pre></div>
+<pre><code class="language-crystal"><span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.cost <span class="o">=</span> <span class="n">15</span> <span class="c"># =&gt; Bool(true)</span>
+<span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.cost      <span class="c"># =&gt; 15</span></code></pre>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/710496026163b789e4647a61242b378db01bd363/src/authentication.cr#L96" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/8da0cfae172538bf6566d54baa78a6f4a5990cd5/src/authentication.cr#L96" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -308,17 +360,20 @@ authentication2 <span class="o">=</span> <span class="t">Authentication</span><s
         <a class="method-permalink" href="#cost=(cost:Int32)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Set cost</p>
+        <div class="doc">
+          
+          <p>Set cost</p>
 
 <p>Example:</p>
 
-<pre><code class="language-crystal"><span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.cost <span class="o">=</span> <span class="n">15</span> <span class="c">#=&gt; Bool(true)</span>
-<span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.cost <span class="o">=</span> <span class="n">3</span> <span class="c"># raise CostTooLow(&quot;Cost too low, 4 minimum is required (current cost 3)&quot;) exception</span></code></pre></div>
+<pre><code class="language-crystal"><span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.cost <span class="o">=</span> <span class="n">15</span> <span class="c"># =&gt; Bool(true)</span>
+<span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.cost <span class="o">=</span> <span class="n">3</span>  <span class="c"># raise CostTooLow(&quot;Cost too low, 4 minimum is required (current cost 3)&quot;) exception</span></code></pre>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/710496026163b789e4647a61242b378db01bd363/src/authentication.cr#L107" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/8da0cfae172538bf6566d54baa78a6f4a5990cd5/src/authentication.cr#L107" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -326,7 +381,14 @@ authentication2 <span class="o">=</span> <span class="t">Authentication</span><s
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="authenticate(password:String,set_password_hash=&amp;quot;&amp;quot;):Bool-instance-method">
       <div class="signature">
@@ -336,19 +398,22 @@ authentication2 <span class="o">=</span> <span class="t">Authentication</span><s
         <a class="method-permalink" href="#authenticate(password:String,set_password_hash=&quot;&quot;):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Authenticate</p>
+        <div class="doc">
+          
+          <p>Authenticate</p>
 
 <p><span class="flag purple">NOTE</span>  You can set the password_hash here with <code>set_password_hash: password_hash</code></p>
 
 <p>Example:</p>
 
 <pre><code class="language-crystal">authentication <span class="o">=</span> <span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.<span class="k">new</span> set_password: test
-authentication.authenticate <span class="s">&quot;test&quot;</span></code></pre></div>
+authentication.authenticate <span class="s">&quot;test&quot;</span></code></pre>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/710496026163b789e4647a61242b378db01bd363/src/authentication.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/8da0cfae172538bf6566d54baa78a6f4a5990cd5/src/authentication.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -361,17 +426,20 @@ authentication.authenticate <span class="s">&quot;test&quot;</span></code></pre>
         <a class="method-permalink" href="#password=(password:String):String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set password</p>
+        <div class="doc">
+          
+          <p>Set password</p>
 
 <p>Example:</p>
 
 <pre><code class="language-crystal">authentication <span class="o">=</span> <span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.<span class="k">new</span>
-authentication.password <span class="o">=</span> <span class="s">&quot;test&quot;</span> <span class="c">#=&gt; &quot;$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K&quot;</span></code></pre></div>
+authentication.password <span class="o">=</span> <span class="s">&quot;test&quot;</span> <span class="c"># =&gt; &quot;$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K&quot;</span></code></pre>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/710496026163b789e4647a61242b378db01bd363/src/authentication.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/8da0cfae172538bf6566d54baa78a6f4a5990cd5/src/authentication.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -384,17 +452,20 @@ authentication.password <span class="o">=</span> <span class="s">&quot;test&quot
         <a class="method-permalink" href="#password_hash:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get password_hash</p>
+        <div class="doc">
+          
+          <p>Get password_hash</p>
 
 <p>Example:</p>
 
 <pre><code class="language-crystal">authentication <span class="o">=</span> <span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.<span class="k">new</span> set_password_hash: <span class="s">&quot;$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K&quot;</span>
-authentication.password_hash <span class="c">#=&gt; &quot;$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K&quot;</span></code></pre></div>
+authentication.password_hash <span class="c"># =&gt; &quot;$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K&quot;</span></code></pre>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/710496026163b789e4647a61242b378db01bd363/src/authentication.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/8da0cfae172538bf6566d54baa78a6f4a5990cd5/src/authentication.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -407,17 +478,20 @@ authentication.password_hash <span class="c">#=&gt; &quot;$2a$16$YXplcnR5dWlvcHF
         <a class="method-permalink" href="#password_hash=(set_password_hash:String):String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set password_hash</p>
+        <div class="doc">
+          
+          <p>Set password_hash</p>
 
 <p>Example:</p>
 
 <pre><code class="language-crystal">authentication <span class="o">=</span> <span class="t">Authentication</span><span class="t">::</span><span class="t">Base</span>.<span class="k">new</span>
-authentication.password_hash <span class="o">=</span> <span class="s">&quot;$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K&quot;</span></code></pre></div>
+authentication.password_hash <span class="o">=</span> <span class="s">&quot;$2a$16$YXplcnR5dWlvcHFzZGZna.zN8.evmDPoNK.n.l6cx0YKKnw37jd9K&quot;</span></code></pre>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BecauseOfProg/authentication/blob/710496026163b789e4647a61242b378db01bd363/src/authentication.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/BecauseOfProg/authentication/blob/8da0cfae172538bf6566d54baa78a6f4a5990cd5/src/authentication.cr#L63" target="_blank">View source</a>]
         
       </div>
     </div>

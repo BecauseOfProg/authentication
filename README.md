@@ -23,7 +23,7 @@ Add the dependency to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  bitwise:
+  authentication:
     github: BecauseOfProg/authentication
 ```
 
@@ -62,7 +62,7 @@ user.authenticate "test" #=> Bool(true)
 
 The MIT License (MIT)
 
-Copyright (c) 2019 Whaxion
+Copyright (c) 2020 Whaxion
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -4,7 +4,7 @@ require "crypto/subtle"
 
 # A class authentication library
 module Authentication
-  VERSION = "0.1.1"
+  VERSION = "0.1.2"
 
   class Base
     @@cost = Crypto::Bcrypt::DEFAULT_COST
